@@ -1,17 +1,32 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+  
+    for (let i = 0; i < array.length; i++) {
+      const complement = (target - array[i])
+      for (let j = i + 1; j < array.length; j++) {
+        if (array[j] === complement) {
+          return true
+        }
+      }
+    }
+    return false
+  }
+
 
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
-  Add your pseudocode here
+  Variables for the array to pass
+  const array = []
+  const target = 
 */
 
 /*
-  Add written explanation of your solution here
+  Create a function that takes in two arguments (array, target)
+  Itterate through the array adding two numbers together seeing if they equal the target some
+  If the two numbers added together equal the target sum return true
+  return false
 */
 
 // You can run `node index.js` to view these console logs
